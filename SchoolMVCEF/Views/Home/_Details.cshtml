@@ -1,0 +1,23 @@
+﻿@model SchoolMVCEF.Models.CoursesViewModel
+
+<h4>Teachers</h4>
+@foreach (var item in Model.CourseTeachers)
+{
+    <h3>@item.LastName. @item.FirstName</h3>
+}
+<hr />
+
+<h4>Assignments</h4>
+@foreach (var item in Model.CourseAssignments)
+{
+    <h3>@item.AssignmentSubject</h3>
+    <div>@item.AssignmentBody</div>
+}
+<hr />
+
+<h4>Students</h4>
+@foreach (var item in Model.CourseStudents)
+{
+    <h4>@item.LastName. @item.FirstName</h4>
+}
+<hr />

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SchoolMVCEF.Models.Course>
+@{
+    ViewBag.Title = "AddAssignment";
+}
+
+<h2>Add Assignment</h2>
+
+@using (Html.BeginForm("AddAssignment", "Home", FormMethod.Post))
+{
+    <div class="form-group form">
+        <label for="s">Subject</label>
+        <input type="text" name="SubjectIn" value="" id="s" class="form-control" />
+
+        <label for="b">Body</label>
+        <input type="text" name="BodyIn" value="" id="b" class="form-control" />
+    </div>
+    <div class="form-group form">
+        @foreach (var item in Model)
+        {
+            <input type="radio" name="Courses" value="@item.CourseId" class="form-control" checked/><span>@item.CourseName</span><br />
+        }
+    </div>
+
+        <input type="submit" value="Add Assignment" class="btn btn-default" />
+}

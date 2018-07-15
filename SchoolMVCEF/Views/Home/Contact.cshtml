@@ -1,0 +1,6 @@
+﻿@model IEnumerable<SchoolMVCEF.Models.Course>
+
+@foreach (var item in Model)
+{
+    <div>@item.CourseName, @item.CourseSubject</div>
+}

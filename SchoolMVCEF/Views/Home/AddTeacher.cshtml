@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SchoolMVCEF.Models.Course>
+
+@{
+    ViewBag.Title = "AddTeacher";
+}
+
+<h2>Add a new Teacher</h2>
+
+<form method="post" action="~/Home/AddTeacher">
+    <div class="form-group form">
+         <label for="n">Firstname:</label>
+         <input type="text" name="FirstnameIn" value="" id="n" class="form-control" />
+    </div>
+    <div class="form-group form">
+         <label for="lN">Lastname:</label>
+         <input type="text" name="LastnameIn" value="" id="lN" class="form-control" />
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <input type="checkbox" name="Courses" value="@item.CourseId" /><span> @item.CourseSubject . @item.CourseName</span> <br />
+    }
+
+    <input type="submit" value="Add Teacher" class="btn btn-default"/>
+</form>

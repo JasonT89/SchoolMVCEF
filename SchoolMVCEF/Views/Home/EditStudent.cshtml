@@ -1,0 +1,58 @@
+﻿@model SchoolMVCEF.Models.StudentsViewModel
+
+@{
+    ViewBag.Title = "EditStudent";
+}
+
+<h2>Edit Student</h2>
+
+@using (Html.BeginForm("EditStudent", "Home", FormMethod.Post))
+{
+    <div class="form-group form">
+        <label for="n">Firstname:</label>
+        <input type="text" name="Firstname" value="@Model.FirstName" id="n" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="pN">Lastname:</label>
+        <input type="text" name="Lastname" value="@Model.LastName" id="pN" class="form-control" />
+    </div>
+
+    if (Model.Courses != null && Model.Courses.Count > 0)
+    {
+        <div class="form-group">
+            <h3>Remove Courses <br /></h3>
+        @foreach (var item in Model.Courses)
+        {
+                <label for="@item.CourseName">@item.CourseName</label>
+                <input type="checkbox" name="Courses" value="@item.CourseId" id="@item.CourseName" class="form-control"/> 
+                <br />
+        }
+        </div>
+    }
+
+    if (Model.Assignments != null && Model.Assignments.Count > 0)
+    {
+        <div>
+            <h3>Assignments <br /></h3>
+        @foreach (var item in Model.Assignments)
+	    {
+		            <div>@item.AssignmentSubject</div>
+                    <div>@item.AssignmentBody</div>
+                    <br />
+	    }   
+        </div>
+    }
+
+    <div class="form-group">
+        <label for="aC">Add a Course by Name</label>
+        <input type="text" name="AddCourse" value="" id="aC" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="hidden" value="@Model.StudentId" name="id" />
+        <input type="submit" value="Edit Student" class="btn btn-default" />
+    </div>
+
+}
+
+

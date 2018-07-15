@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "EditAll";
+}
+
+<h2>Edit</h2>
+
+@*@using (Ajax.BeginForm("EditAll", new AjaxOptions()
+{
+    HttpMethod = "post",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "editList"
+}))
+{
+    <div class="form-group">
+        <input type="hidden" value="Courses" name="edit" />
+        <input type="submit" value="Courses" class="btn btn-default" />
+    </div>
+}*@
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" value="Courses" name="edit" />
+        <input type="submit" value="Courses" class="btn btn-default" />
+    </div>
+</form>
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" value="Teachers" name="edit" />
+        <input type="submit" value="Teachers" class="btn btn-default" />
+    </div>
+</form>
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" value="Students" name="edit" />
+        <input type="submit" value="Students" class="btn btn-default" />
+    </div>
+</form>
+
+
+
+@*@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <input type="hidden" value="Courses" name="edit" />
+        <input type="submit" value="Courses" class="btn btn-default" />
+    </div>
+}*@
+
+@*@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <input type="hidden" value="Teachers" name="edit" />
+        <input type="submit" value="Teachers" class="btn btn-default" />
+    </div>
+}*@
+
+@*@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <input type="hidden" value="Students" name="edit" />
+        <input type="submit" value="Students" class="btn btn-default" />
+    </div>
+}*@
