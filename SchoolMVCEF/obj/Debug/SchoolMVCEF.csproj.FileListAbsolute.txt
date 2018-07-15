@@ -97,3 +97,4 @@ C:\Users\Jason\Desktop\SchoolMVCEF\SchoolMVCEF\obj\Debug\SchoolMVCEF.Migrations.
 C:\Users\Jason\Desktop\SchoolMVCEF\SchoolMVCEF\obj\Debug\SchoolMVCEF.csproj.GenerateResource.cache
 C:\Users\Jason\Desktop\SchoolMVCEF\SchoolMVCEF\obj\Debug\SchoolMVCEF.Migrations.One.resources
 C:\Users\Jason\Desktop\SchoolMVCEF\SchoolMVCEF\obj\Debug\SchoolMVCEF.Migrations.two.resources
+C:\Users\Jason\Desktop\SchoolMVCEF\SchoolMVCEF\obj\Debug\SchoolMVCEF.Migrations.Init1.resources

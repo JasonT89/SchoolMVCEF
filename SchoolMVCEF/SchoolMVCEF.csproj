@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201807151035194_two.Designer.cs">
       <DependentUpon>201807151035194_two.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807151513487_Init1.cs" />
+    <Compile Include="Migrations\201807151513487_Init1.Designer.cs">
+      <DependentUpon>201807151513487_Init1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assignment.cs" />
     <Compile Include="Models\Course.cs" />
@@ -234,7 +238,6 @@
     <Content Include="Views\Home\ShowEditStudents.cshtml" />
     <Content Include="Views\Home\ShowEditTeachers.cshtml" />
     <Content Include="Views\Home\_Details.cshtml" />
-    <Content Include="Views\Home\_EditCourses.cshtml" />
     <Content Include="Views\Home\_Students.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -262,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807151035194_two.resx">
       <DependentUpon>201807151035194_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807151513487_Init1.resx">
+      <DependentUpon>201807151513487_Init1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
