@@ -82,6 +82,8 @@ namespace SchoolSystem.Controllers
                 teacher.FirstName = Firstname;
                 teacher.LastName = Lastname;
 
+                
+
                 if (Courses != null)
                 {
                     foreach (var item in Courses)
@@ -266,6 +268,8 @@ namespace SchoolSystem.Controllers
                 FirstName = FirstnameIn,
                 LastName = LastnameIn
             };
+
+            teacher.Courses = new List<Course>();
 
             if (Courses != null)
             {
