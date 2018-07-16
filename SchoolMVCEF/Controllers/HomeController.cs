@@ -206,6 +206,8 @@ namespace SchoolSystem.Controllers
                 LastName = LastnameIn
             };
 
+            student.Courses = new List<Course>();
+
             if (Assignments != null)
             {
                 foreach (var item in Assignments)
@@ -219,7 +221,7 @@ namespace SchoolSystem.Controllers
             _db.Students.Add(student);
 
             _db.SaveChanges();
-            return RedirectToAction("About");
+            return RedirectToAction("AddAll");
         }
 
         public ActionResult AddCourse(string SubjectIn, string NameIn, params int[] Assignments)
